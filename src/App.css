@@ -1,38 +1,214 @@
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #222222;
+  margin: 0 auto;
+  padding: 20px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+nav {
+  /* background-color: rgb(156, 152, 255); */
+  color: #fff;
+  border-radius: 10px;
+
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: white;
+  color: rgb(255, 252, 252);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 10px #999;
+  margin-top: 20px;
+}
+
+button a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #222222;
+  font-weight: 500;
+}
+
+.card {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.about {  
+  background-color: #fff;
+  box-shadow: 0px 0px 30px #999;
+
+}
+
+.projects {  
+  background-color: #9aff8d;
+  box-shadow: 0px 0px 30px #9cff8f;
+  color: #0a5700;
+}
+
+.project-intro {
+  text-align: center;
+  color: #fff;
+  margin: 50px 0;
+}
+
+
+.contact {  
+  background-color: rgb(189, 141, 255);
+  box-shadow: 0px 0px 30px rgb(192, 147, 255);
+  color: rgb(43, 0, 87);
+}
+
+.contact-intro {
+  text-align: center;
+  color: #fff;
+  margin: 50px 0;
+}
+
+.project {
+  text-align: center;
+}
+.thumbnails {
+  background-color: #999;
+  border-radius: 5px;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: 0.2s ease-in-out;
+
+}
+
+.thumbnails:hover {
+  height: 250px;
+  box-shadow: 0 0 35px #966c55;
+}
+
+.thumbnails h3{
+  color: #f4f4f4;
+}
+
+.p1 {
+  background-image: url(./Pages/imgs/Owl.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 40px;
+}
+
+.p2 {
+  background-image: url(./Pages/imgs/Painting.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.p3 {
+  background-image: url(./Pages/imgs/Sculpture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+@media screen and (min-width: 375px){
+  
+  nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 2.6em;
   }
+
+  p {
+    font-size: 18px;
+  }
+
+  p,h1, .card {
+    text-align: left;
+  }
+
+  .card {
+    padding: 40px 60px;
+  }
+
+  .thumbnails {
+    height: 30vh;
+    text-align: left;
+    padding: 40px 60px;
+  }
+
+  button {
+    max-width: 200px;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  button a{
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .organiser {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .project-intro, .contact-intro {
+    padding: 20px 60px;
+  }
+
+  nav {
+    margin: 0 auto;
+  }
+  
+  nav a {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 30px;
+  }
+  
 }
+

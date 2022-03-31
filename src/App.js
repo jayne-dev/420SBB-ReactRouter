@@ -1,24 +1,63 @@
 import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Routes, Route, Link, NavLink} from'react-router-dom'
+import Contact from './Pages/Contact';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Projects from './Pages/Projects';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <nav>
+        <NavLink 
+        to="/"
+        style={({ isActive }) => ({
+          color: isActive ? '#fff' : '#545e6f',
+          background: isActive ? '#7600dc' : '#f0f0f0',
+        })}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+        Home 
+
+          <NavLink 
+          to="/about"
+          style={({ isActive }) => ({
+            color: isActive ? '#fff' : '#545e6f',
+            background: isActive ? '#7600dc' : '#f0f0f0',
+          })}
+          > About
+          </NavLink>
+
+          <NavLink 
+          to="/projects"
+          style={({ isActive }) => ({
+            color: isActive ? '#fff' : '#545e6f',
+            background: isActive ? '#7600dc' : '#f0f0f0',
+          })}
+          >
+          Projects
+          </NavLink>
+
+          <NavLink 
+          to="/contact"
+          style={({ isActive }) => ({
+            color: isActive ? '#fff' : '#545e6f',
+            background: isActive ? '#7600dc' : '#f0f0f0',
+          })}
+          >
+          Contact
+          </NavLink>
+
+        </NavLink>
+      </nav>
+
+      <Routes>
+        <Route path='/' element={ <Home /> } />
+        <Route path='/about' element={ <About />} />
+        <Route path='/projects' element={ <Projects />} />
+        <Route path='/contact' element={ <Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
