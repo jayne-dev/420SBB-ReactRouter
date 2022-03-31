@@ -140,7 +140,7 @@ button a {
 
 
 
-@media screen and (min-width: 420px){
+@media screen and (min-width: 375px){
   
   nav{
     display: flex;
